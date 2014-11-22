@@ -1,0 +1,114 @@
+<div class="settings-panel">
+<div class="navigation">
+	<h1>Settings</h1>
+	<ul class="tabs">
+		<li{{#eq tab "profile"}} class="active"{{/eq}}><a href="/account/settings/profile">profile</a></li>
+		<li{{#eq tab "account"}} class="active"{{/eq}}><a href="/account/settings/account">account</a></li>
+		<li{{#eq tab "websites"}} class="active"{{/eq}}><a href="/account/settings/websites">websites</a></li>
+		<li{{#eq tab "notifications"}} class="active"{{/eq}}><a href="/account/settings/notifications">notifications</a></li>
+		<li{{#eq tab "close"}} class="active"{{/eq}}><a href="/account/settings/close">close account</a></li>
+	</ul>
+</div>
+<div class="settings-content">
+	<div class="message" style="display:none;"></div>
+	{{#eq tab "profile"}}
+		<form action="/account/settings/profile" class="full user" method="post" enctype="multipart/form-data" id="account_settings">
+		<h2>About you</h2>
+		<label class="function" for="function">Position? </label>
+		
+	<input id="function" name="profile[function]" placeholder="Photographer, model..." value="{{user.profile.function}}"/>
+		<label for="location">Where about?</label>
+		<input id="location" placeholder="Location" name="profile[location]" value="{{user.profile.location}}"/>
+		<label for="headline">Headline</label>
+		<input id="headline" placeholder="What's special about you?" name="profile[headline]" value="{{user.profile.headline}}"/>
+		<label class="about" for="about">Your story</label>
+		<textarea id="about" class="User about" name="profile[about]" placeholder="Tell us about you...">{{user.profile.about}}</textarea>
+		<button type="submit" name="save" value="1" title="save">save</button>
+	{{/eq}}
+	{{#eq tab "account"}}
+		<form action="/account/settings/account" class="full user" method="post" enctype="multipart/form-data" id="account_settings">
+		<h2>Usage: <span id="usage_used">{{usage.used}}</span>/<span id="usage_allocated">{{usage.allocated}}</span></h2>
+		<div class="progress"><div class="bar" id="usage_percentage" style="width:{{usage.percentage}}%"></div></div>
+		<h2>Basic info</h2>
+		<input type="text" id="firstname" class="text" placeholder="Firstname" name="firstname" value="{{user.firstname}}"/>
+		<input type="text" id="lastname" class="text" placeholder="Lastname" name="lastname" value="{{user.lastname}}"/>
+		<input type="text" id="email" class="text" placeholder="Email" name="email" value="{{user.email}}"/>
+			
+		<h2>Language</h2>
+		<select id="language" name="settings[language]">
+			<option value="fr_FR">Français (Fr)</option>
+			<option value="en_GB">English (UK)</option>
+			<option value="es_ES">Español (Es)</option>
+			<option value="da_DK">Dansk (Dk)</option>
+			<option value="ru_RU">Russian (Ru)</option>
+		</select>
+		<button type="submit" name="save" value="1" title="save">save</button>
+	{{/eq}}
+	
+	{{#eq tab "websites"}}
+		<h2>Websites</h2>
+		<ul class="websites">
+		{{#each sites}}
+			<li>
+				<div class="alert alert-info">This domain will expire on {{expirationDate}}</div>
+				<p>
+					<img src="/img/sale/domain.png" alt="website" height="14px"> 
+					<a href="http://{{url}}" target="_blank">{{url}}</a>
+					<span class="right">
+						<a href="/site/{{id}}/edit" class="btn">edit</a> 
+						<a href="/sites/renew/{{id}}" class="btn btn-green">renew</a>
+					</span>
+				</p>
+			</li>
+		{{/each}}
+	{{/eq}}
+	
+	{{#eq tab "notifications"}}
+		<h2>Notifications</h2>
+		<div class="d200 col">
+		<form action="/account/settings/notifications" class="full" method="post">
+		<div class="switches">
+			<div class="switch">
+				<label>Comments:</label>
+				<div class="onoffswitch right">
+					<input type="checkbox" id="notifications_commented" name="settings[notifications][commented]" class="onoffswitch-checkbox">
+					<label class="onoffswitch-label" for="notifications_commented">
+						<div class="onoffswitch-inner"></div><div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+			</div>
+			<div class="switch">
+				<label>Likes:</label>
+				<div class="onoffswitch right">
+					<input type="checkbox" id="notifications_liked" name="settings[notifications][liked]" class="onoffswitch-checkbox">
+					<label class="onoffswitch-label" for="notifications_liked">
+						<div class="onoffswitch-inner"></div><div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+			</div>
+			<div class="switch">
+				<label>Follows:</label>
+				<div class="onoffswitch right">
+					<input type="checkbox" id="notifications_followed" name="settings[notifications][followed]" class="onoffswitch-checkbox">
+					<label class="onoffswitch-label" for="notifications_followed">
+						<div class="onoffswitch-inner"></div><div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+			</div>
+			<div class="switch">
+				<label>Newsletter:</label>
+				<div class="onoffswitch right">
+					<input type="checkbox" id="notifications_newletter" name="settings[notifications][newletter]" class="onoffswitch-checkbox">
+					<label class="onoffswitch-label" for="notifications_newletter">
+						<div class="onoffswitch-inner"></div><div class="onoffswitch-switch"></div>
+					</label>
+				</div>
+			</div>
+		</div>
+		<button type="submit">Save</button>
+		</form>
+		</div>
+	{{/eq}}
+	</form>
+</div>
+</div>

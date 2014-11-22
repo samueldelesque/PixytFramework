@@ -1,0 +1,40 @@
+<div id="sidebar">
+	<div class="navigation">
+		<div class="tab">
+			<div class="toolbox">
+				<a href="/organize" class="btn"><span class="tiny bold">&lt;</span> back</a>
+			</div>
+		</div>
+		<div class="tab">
+			<div class="denomination">Organization</div>
+			<div class="el">Collection layout: </div>
+			<div class="el">Title location: </div>
+			<div class="el">Menu location: </div>
+		</div>
+		<div class="tab">
+			<div class="denomination">Look & Feel</div>
+			<div class="el">Background: </div>
+			<div class="el">Color palette: </div>
+			<div class="el">Fonts: </div>
+		</div>
+		<div class="tab">
+			<div class="denomination">Modules</div>
+			<div class="el">Contact page: <input type="checkbox" class="right" checked></div>
+			<div class="el">About page: <input type="checkbox" class="right"></div>
+		</div>
+	</div>
+</div>
+<div id="main" class="hassidebar">
+	<form action="/site/{{site.id}}" class="site" method="PUT">
+		<div id="mainColumn">
+			<div class="d600 center nooverflow">
+			<h1 title="Title"><input name="title" placeholder="Title" value="{{site.title}}"/></h1>
+			<h2><textarea name="description" placeholder="Start typing your website's description here. This is important for SEO, so Google knows what your site is about.">{{site.description}}</textarea></h2>
+				<div class="item photo_item">
+					<h3></h3>
+					<img src="/cdn/full/1.jpg" alt="Photo 1">
+				</div>
+			</div>
+		</div>
+	</form>
+</div>

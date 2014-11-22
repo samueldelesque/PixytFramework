@@ -1,0 +1,35 @@
+body{background:#F5F6F4;}
+/* MENU */
+#page{margin-top:52px;}
+#menu {position:fixed;font-size:13px;z-index:99;top:0;left:0;right:0;height:52px;padding:0;box-shadow:1px 0 16px rgba(20,20,20,0.2);background-color: #222222;background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#444444), to(#222222));background-image: -webkit-linear-gradient(top, #444444, #222222); background-image:-moz-linear-gradient(top, #444444, #222222);background-image:-ms-linear-gradient(top, #444444, #222222);background-image:-o-linear-gradient(top, #444444, #222222);
+font-family:"Oxygen";font-size:15px;}
+#menu .logo{float:left;}
+#menu .logo a{font-size:26px;}
+#menu .logo img{box-shadow:0 0 3px rgba(77,167,212,0.9);vertical-align:top;margin-top: 4px;}
+#menu a{padding:8px 10px 9px 10px;margin:0;position:relative;display:inline-block;border-radius:0;border:none;line-height:34px;box-shadow:none;letter-spacing:0;height:35px;color:#eee;border-left:1px solid #333;background:rgba(0,0,0,0.2);}
+#menu a:hover{background:rgba(0,0,0,0.5);}
+#menu a.blue{background-color:rgba(24,171,239,.9);color:#fff;text-shadow:-1px -1px #555;min-width:80px;text-align:right;}
+#menu a.blue:hover{background-color:rgba(24,171,239,1);}
+#menu a.green{background-color:#37bf54;background-image: linear-gradient(#37bf54, #28943f);color:#fff;}
+#menu a.green:hover{background-image: linear-gradient(#23ac41, #38a44f);}
+#menu a span{font-weight:bold;font-size:14px;margin-left:3px;color:#FFB;}
+#menu .submenu-link{display:inline-block;height:52px;}
+#menu .submenu-link img{width:28px;height:28px;border-radius:14px;box-shadow:0 0 10px rgba(120,120,120,1);}
+#menu .submenu{position:fixed;z-index:99;text-align:left;top:52px;width:152px;border-radius:0 0 6px 6px;display:none;padding-bottom:7px;background-color: #333333;background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333333), to(#222222));background-image: -webkit-linear-gradient(top, #333333, #222222); background-image:-moz-linear-gradient(top, #333333, #222222);background-image:-ms-linear-gradient(top, #333333, #222222);background-image:-o-linear-gradient(top, #333333, #222222);}
+#menu .submenu-link:hover .submenu{display:block;}
+#menu .submenu img{vertical-align:middle;margin-right:8px;height:19px;width:auto;box-shadow:none;}
+#menu .submenu a{padding:4px 8px;text-shadow:0 1px 0 #444;display:block;margin:0;color:#ddd;}
+#menu .submenu a:hover{background-color:#222;}
+/* SEARCHBAR */
+#menu input{height:22px;background-color:#111;border-radius:2px;color:#999;padding:4px 12px;margin:10px 6px 0 6px;width:150px;border:1px solid #333;box-shadow:none;border-radius:20px;}
+#menu input:hover{color:#bbb;}
+#menu input:focus{color:#ddd;}
+
+.transactions{border-radius:3px;background:rgba(0,0,0,0.1);}
+.transactions>div{border-top:1px solid #eee;background:rgba(255,255,255,0.1);padding:4px;}
+
+.user-profile{background:rgba(255,255,255,0.7);bottom:0;top:50px;padding:20px;left:0;z-index:2;}
+.user-profile p.quote{color:#444;padding:14px 0;margin:14px 0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;}
+.user-profile .links a{color:#222;font-size:14px;margin-right:10px;}
+.user-profile .links a i{margin-top:3px;}
+.user-profile .links a:hover{color:#078;}

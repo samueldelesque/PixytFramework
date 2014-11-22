@@ -1,0 +1,35 @@
+<div id="sidebar">
+	<div class="navigation">
+		<div class="tab">
+			<div class="toolbox">
+				<!-- <img src="/img/icons/1.0/add-stack.png" alt="create stack" title="Create Stack"/> -->
+				<a href="javascript:void(0)" class="action createstack btn btn-green">+add collection</a>
+				<br class="clear"/>
+			</div>
+		</div>
+		<div class="tab">
+			<div class="denomination">Filters</div>
+			<div class="el filter" data-filter="genre" data-value=""><span class="bold">all</span></div>
+			{{#each genres}}
+			{{#if this}}<div class="el filter" data-filter="genre" data-value="{{this}}"> <span>{{this}}</span></div>{{/if}}
+			{{/each}}
+		</div>
+	</div>
+</div>
+<br/>
+<div id="main" class="hassidebar">
+{{#each stacks}}
+<div class="folder">
+	<a href="/stack/{{id}}/edit" class="cover">
+	{{#if cover}}<img title="{{title}}" src="/cdn/{{uid}}/stack/{{cover}}.jpg" alt="{{title}}" width="80" height="80">{{/if}}
+	</a>
+	<div class="title"><a href="/stack/{{id}}/edit">{{title}}</a></div>
+</div>
+{{else}}
+<div class="empty">
+	<h3>Make your first collection</h3>
+	A collection is a series of images that you have produced.
+</div>
+{{/each}}
+<br class="clear"/>
+</div>

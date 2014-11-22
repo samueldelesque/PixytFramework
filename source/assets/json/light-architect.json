@@ -1,0 +1,69 @@
+{
+	"index":{
+		"title":"Light Architect Magazine: The Abstract Issue",
+		"description":"Light Architect Magazine (LAM) is a bi-annual magazine from Paris.",
+		"template":"index"
+   },
+   "magazine":{
+		"title":"LAM Magazine",
+		"description":"LAM is bold photography magazine with emphasis on emerging artists.",
+		"longDescription":"Light Architect Magazine is our curated collection of photographic series that are approaching a specific topic we select for the issue. This issue’s topic is “Abstract”.",
+		"template":"magazine",
+		"content":{
+			"lam-4":{
+				"title":"The Abstract Issue",
+				"description":"It is our belief that what occurs within the camera creates a new layer of perception that isn’t strictly related to its physical counterpart.",
+				"template":"issue",
+				"issuu":"9244076\/7385507"
+			},
+			"lam-3":{
+				"title":"The Fashion Issue",
+				"description":"A visual collection of portfolios and interviews of photographers, models and designers...",
+				"template":"issue",
+				"issuu":"9244076\/4720875"
+			},
+			"lam-2":{
+				"title":"The Grandma Issue",
+				"description":"Grandmere. \u03b3\u03b9\u03b1\u03b3\u03b9\u03ac. Mormor. Mamie. \ud560\uba38\ub2c8. Nonna. Grandma. Welcome to our Grandma Issue!",
+				"template":"issue",
+				"issuu":"9244076\/5206371"
+			},
+			"lam-1":{
+				"title":"Number One Issue",
+				"description":"Featuring Synchrodogs, Gaar det godt, Kimdary Yin, and other awards from Pixyt Contest...",
+				"template":"issue",
+				"issuu":"9244076\/5206431"
+			}
+		}
+ 	},
+	"shop":{
+		"title":"Light Architect Magazine /Shop",
+		"description":"Light Architect Magazine (LAM) is a bi-annual magazine from Paris",
+		"template":"shop"
+	},
+	"artists":{
+		"title":"Light Architect Magazine /Artists",
+		"description":"Light Architect Magazine (LAM) is a bi-annual magazine from Paris",
+		"template":"artists"
+	},
+	"contact":{
+		"title":"Light Architect Magazine /Contact us",
+		"description":"Light Architect Magazine (LAM) is a bi-annual magazine from Paris",
+		"template":"contact"
+	},
+	"submission":{
+		"title":"Euphoria Issue: Submit your work",
+		"description":"Become a Light Architect affiliated artist. Submit your work directly through Infinit.",
+		"template":"submission"
+	},
+	"contestrules":{
+		"title":"Euphoria Issue: Contest Rules",
+		"description":"Light Architect Magazine (LAM) is a bi-annual magazine from Paris",
+		"template":"contestrules"
+	},
+	"euphoria":{
+		"title":"Euphoria Issue: LAM #5 contest",
+		"description":"Participate in the Euphoria Issue, Light Architect Magazine (LAM), a bi-annual magazine from Paris",
+		"template":"euphoria"
+	}
+}

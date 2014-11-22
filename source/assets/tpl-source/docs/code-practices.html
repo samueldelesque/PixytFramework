@@ -1,0 +1,95 @@
+<h2>Languages</h2>
+<h3>Backend:</h3>
+<ul>
+	<li>PHP</li>
+	<li>HANDLEBARS PHP</li>
+	<li>Node [Sockets.io]</li>
+</ul>
+
+<h3>Frontend:</h3>
+<ul>
+	<li>JS [jQuery, Underscore, Backbone, Marionette]</li>
+	<li>CSS</li>
+	<li>LESS</li>
+</ul>
+
+<h2>FAQ</h2>
+
+<h3>Adding images:</h3>
+<p>If the images are for general site wide use (icons etc) then place them [PNG only!] into assets/img/icons/LATEST-VERSION/ and they will automatically be added to the Less when compiled and can be used as a mixin:</p>
+<code>
+.my-class{
+	.image-name;
+}
+</code>
+<p>Adding the class “my-class” to an element will now place “image-name.png” as its background.</p>
+<p>All other type of images should be avoided as often as possible, and otherwise be placed into assets/img/ into a logical folder.</p>
+
+<h3>Adding Javascript:</h3>
+<p>The assets/js/ [Views/Models/Collection] folders are automatically watched and included in the app.min.js file. If you are adding a Lib of custom piece of code, please put it in the appropriate JS folder, then open the Gruntfile.js and add it in the “concat” task.</p>
+
+<h3>Adding API Objects:</h3>
+<p>The Pixyt API features a bunch of standard objects (User, Photo, Stack…). If you are adding a functionality to that site that requires a new kind of object however, you will need to add the following:</p>
+<div class="required">
+	a Myobject.php to inc/php/objects/ (capitalized!)<br/>
+	which contains an object with at least the following structure:
+	<code>
+	class Myobject extends Object{
+		public $uid;	//required if can be created/modified by a User in the interface
+		
+		//[....list of properties....]
+			
+		protected static function publicFunctions($key=NULL){
+			return arrayGetKey($key,array(
+				'preview'=>true,
+				//[....list of publicly* availble functions....]
+				// * here public means any User can call that function on an existing object
+			));
+		}
+		
+		protected static function ownerFunctions($key=NULL){
+			return arrayGetKey($key,array(
+				'edit'=>true,
+				//[....list of owner-only availble functions....]
+			));
+		}
+		
+		public function descriptor($key=NULL){
+			return arrayGetKey($key,array(
+				'id'=>'int',
+				'uid'=>'int',
+
+				//[....list of properties....]
+				// note that all objects must have an "id","created","modified", and "deleted"
+
+				'created'=>'int',
+				'modified'=>'int',
+				'deleted'=>'int',
+			));
+		}
+		
+		public function validateData($n,$v){
+			switch ($n){
+				case 'id':
+				case 'uid':
+				case 'created':
+				case 'modified':
+				case 'deleted':
+					return true;
+				break;
+				
+				//[....validate each property for User input....]
+
+				default:
+					Msg::notify($n.' no a valid field');
+					return false;
+				break;
+			}
+			return false;
+		}
+	}
+	</code>
+</div> 
+
+
+<h3>Modifying DB structure:</h3>

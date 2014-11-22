@@ -1,0 +1,15 @@
+.corp{font-size:16px;}
+.corp #content{box-shadow:-100px 0 100px rgba(20,25,35,0.08);background:#f0f0f0;}
+.corp .hero-unit{margin-bottom:0;box-shadow:-100px 0 100px rgba(20,25,35,0.08);z-index:2;}
+#corpMenu{top:0;width:100%;padding:50px 0 30px 0;background:rgba(0,0,0,0.1);}
+#corpMenu .inner-content{width:1000px;margin:0 auto;}
+#corpMenu a{color:#111;margin-right:6px;text-transform:uppercase;letter-spacing:-1px;font-size: 14px;line-height: 20px;padding-top:7px;}
+#corpMenu a.active{border-top:3px solid #906;}
+#corpMenu a:hover{border-top:3px solid #936;}
+#corpMenu #lightarchitectLogo{margin-top:-40px;}
+#corpMenu a.blue{color:#29ABE2;}
+#corpMenu a.yellow{color:#ffc;}
+#corpFootMenu{background:#f2f2f2;box-shadow:-100px 0 100px rgba(20,25,35,0.04);}
+.magazine{width:98%;padding:1%;margin:0;}
+.magazine img{width:100%;}
+.magazine img.half{width:50%;}

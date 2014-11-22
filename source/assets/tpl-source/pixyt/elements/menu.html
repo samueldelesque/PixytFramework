@@ -1,0 +1,63 @@
+<a href="/" class="left logo"><img src="/assets/img/logo/logo1.028x28.png" alt="Pixyt" title="Pixyt" height="28"></a>
+<form action="/search" class="inline left" method="post" enctype="multipart/form-data" id="search">
+	<input name="string" type="text" placeholder="Search..."/>
+</form>
+<span class="right">
+	{{#if connected}}
+	<a href="/" title="Pixyt feed" class="hidden-mobile">
+		Home <!-- <img src="/assets/img/icons/1.0/factory.png" height="32" width="32" alt="factory" title="Pixyt feed"> -->
+	</a>
+	<a href="/organize" title="Upload and sort photos." class="hidden-mobile">
+		Upload
+		<!-- <img src="/assets/img/icons/1.0/upload.png" height="32" width="32" alt="organize photos" title="Upload some photos"> -->
+	</a>
+	<a href="/account/messages" title="Messages, likes and comments." class="hidden-mobile">
+		Messages<!-- <img src="/assets/img/icons/1.0/messages.png" height="32" width="32" alt="Messages" title="Messages"> -->
+	</a>
+
+	
+	<a href="/sites" class="blue">Portfolio</a>
+	
+	<span class="submenu-link">
+		<a href="/user/{{me.id}}" title="My profile">
+			||| <!-- <img src="/assets/img/profile/text.png" class="nocopy" alt="you" title="you"> -->
+		</a>
+		<ul class="submenu">
+			<li>
+				<a href="/user/{{me.id}}" title="My profile">
+					<img src="/assets/img/profile/text.png" alt="My profile" title="My profile">
+					My profile
+				</a>
+			</li>
+			<li>
+				<a href="/account/settings" title="Account settings">
+					<img src="/assets/img/icons/1.0/settings.png" alt="settings" height="28" width="28" title="Account settings"> 
+					Settings
+				</a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="/account/messages" title="Upload photos.">
+					<img src="/assets/img/icons/1.0/messages.png" height="32" width="32" alt="Messages" title="My Messages">
+					Messages
+				</a>
+			</li>
+			<li class="hidden-desktop">
+				<a href="/organize" title="Upload photos.">
+					<img src="/assets/img/icons/1.0/upload.png" height="32" width="32" alt="Upload photos" title="Upload photos">
+					Organizer
+				</a>
+			</li>
+			<li>
+				<a href="/account/logout" title="Sign out" class="link">
+					<img src="/assets/img/icons/1.0/logout.png" alt="Sign out" height="28" width="28" title="Sign out">
+					Sign out
+				</a>
+			</li>
+		</ul>
+	</span>
+	
+	{{else}}
+	<!-- <a href="/">welcome</a> -->
+	<a href="/home/login">login</a>
+	{{/if}}
+</span>

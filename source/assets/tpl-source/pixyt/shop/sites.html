@@ -1,0 +1,158 @@
+<div id="create" style="display:none;">
+	<div class="hero">
+		<h1>A website <strong>tailored</strong> for you.</h1>
+		<img src="/img/sale/site-landing.png" alt="Best web hosting, unilimitted traffic, easy content editor..." width="800" height="407" class="hidden-mobile"/>
+		<ul class="features white hidden-desktop">
+			<li>Manage everything in one place</li>
+			<li>Add photos from anywhere</li>
+			<li>Connect straight to your work station</li>
+			<li>Unlimitted traffic</li>
+			<li>Easy to use</li>
+			<li>Totally customizable</li>
+			<li>All included</li>
+		</ul>
+	</div>
+	<div class="actions">
+		<a href="javascript:;" class="trial">Try it for free</a>
+		<a href="/sites/domain" class="buy-now">Buy now</a>
+	</div>
+</div>
+
+<div id="domain" style="display:none;">
+	<div class="hero">
+		<form action="/site" class="inline domain" method="post">
+			<input name="url" type="text" placeholder="Domain">
+			<button type="submit">Go</button>
+		</form>
+		<p class="small white">Type in your desired domain. For example <span class="underline">yourname.com</span></p>
+	</div>
+	<div class="actions"></div>
+	<div class="d3x2 col">
+		<div class="options">
+			<div class="placeholder"><h3 class="grey">Enter a domain name first.</h3></div>
+			<div class="error" style="display:none;"></div>
+		</div>
+	</div>
+	<div class="d3 col">
+		<div class="checkout">
+			<form action="/sites/hosting" method="post" class="inline">
+			<div class="items"></div>
+			<div class="total-line"><strong>Total: <span class="total">0€</span></strong></div>
+			<div class="buttons">
+				<a href="/sites/create" class="btn btn-black">back</a>
+				<span class="right">
+					<button class="btn btn-green next" disabled type="submit">next: hosting</button>
+				</span>
+			</div>
+			</form>
+		</div>
+	</div>
+	<br class="clear"/>
+</div>
+
+<div id="hosting" style="display:none;">
+	<div class="hero">
+		<h1>Storage</h1><br/>
+		<div class="plans">
+			<div class="plan1 selected">
+				<h2>2GB</h2>
+				<p>~ 400 photos</p>
+				<span class="price">4$/m</span>
+			</div>
+			<div class="plan2">
+				<h2><span>&#8734;</span></h2>
+				<p>~ 999999999+ photos</p>
+				<span class="price">12$/m</span>
+			</div>
+			<br class="clear"/>
+		</div>
+	</div>
+	<div class="d3x2 col">
+		<div class="moreinfo">
+			<h3>What you get with your storage:</h3>
+			<ul>
+				<li><img src="/assets/img/sale/included.png" width="20" height="20" alt="included"/> Unlimitted traffic</li>
+				<li><img src="/assets/img/sale/included.png" width="20" height="20" alt="included"/> Easy to use drag&drop interface</li>
+				<li><img src="/assets/img/sale/included.png" width="20" height="20" alt="included"/> Access to high quality templates</li>
+				<li><img src="/assets/img/sale/included.png" width="20" height="20" alt="included"/> Fully customizable site</li>
+				<li><img src="/assets/img/sale/included.png" width="20" height="20" alt="included"/> Our friendly support</li>
+			</ul>
+		</div>
+	</div>
+	<div class="d3 col">
+		<div class="checkout">
+			<form action="/sites/payment" method="post" class="inline">
+			<div class="items"></div>
+			<div class="total-line"><strong>Total: <span class="total">0€</span> 
+				<button class="right btn btn-green next" type="submit">next: payment</button></strong>
+				<a href="/sites/domain" class="btn btn-black right">back</a>
+			</div>
+			</form>
+		</div>
+	</div>
+</div>
+	
+<div id="payment" style="display:none;">
+	<div class="hero">
+	<form action="" method="POST" id="payment-form">
+		<span class="payment-errors"></span>
+		
+		<div class="payment-options">
+		<div class="bank-card">
+		<div class="form-row">
+		<label>
+		  <input type="text" placeholder="Card Number" class="cardnumber" size="20" data-stripe="number"/>
+		</label>
+		</div>
+		
+		<div class="personnal-info">
+			<div class="form-row">
+			<label>
+			  <input type="text" placeholder="First name" class="name"/>
+			</label>
+			</div>
+			
+			<div class="form-row">
+			<label>
+			  <input type="text" placeholder="Last name" class="name"/>
+			</label>
+			</div>
+		</div>
+		
+		<div class="card-info">
+			<div class="form-row expires">
+			<label>
+			  <span>Expires</span>
+			  <input type="text" placeholder="MM" size="2" class="month" data-stripe="exp-month"/>
+			</label>
+			<span> / </span>
+			<input type="text" placeholder="YYYY" class="year" size="4" data-stripe="exp-year"/>
+			</div>
+			<br class="clear" />
+			
+			<div class="form-row cvc">
+			<label>
+				<span>SECURITY CODE</span>
+				<input type="text" placeholder="CVC" size="4" data-stripe="cvc"/>
+			</label>
+			<br class="clear" />
+			</div>
+		</div>
+		
+		</div>
+		<div>
+			<span class="cards-accepted left-text">
+			<img src="/assets/img/bank-cards/cb1.gif" alt="master" />
+			<img src="/assets/img/bank-cards/cb2.gif" alt="visa" />
+			<img src="/assets/img/bank-cards/cb3.gif" alt="mastercard" />
+			</span>
+			<span class="small grey left-text">&nbsp;&nbsp;&nbsp;&nbsp;You can also pay with Paypal</p>
+		</div>
+		
+		<br/>
+		<p><button type="submit" class="btn btn-green big">Submit Payment</button></p><br/>
+		<a href="/sites/hosting" class="btn btn-black grey">cancel</a>
+		</div>
+	</form>
+	</div>
+</div>

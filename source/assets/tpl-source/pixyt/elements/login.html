@@ -1,0 +1,44 @@
+<div id="main">
+	<div class="welcome"><!-- 
+		<img src="/assets/img/promoted/potatoe.jpg" alt="Potatoe" class="featured hidden-mobile">
+		/-/img/promoted/anais-zamboni.jpg
+		<img src="/assets/img/promoted/potatoe.jpg" alt="Anais Zamboni" class="featured hidden-desktop"> -->
+		<div class="d3 center">
+		<div class="welcome-overlay login">
+			<div class="message warning">
+				Subscriptions are not open at the moment! if you have an account you can login here to view your settings, otherwise please subscribe to the newsletter and we will inform you when you can create an account.
+			</div>
+			<h1>Sign in</h1>
+			<div class="message hidden"></div>
+			<form action="/home/login" class="full" method="post">
+				<input name="email" type="email" placeholder="Email"><br/>
+				<input name="password" type="password" placeholder="Password"><br/>
+				<button type="submit" class="btn btn-green">Sign in</button><br/>
+				<p class="small grey">
+					<a href="/" class="grey">No account?</a> - 
+					<a href="/home/lostpassword" id="recoverpassword" class="grey">Lost password</a>
+				</p>
+			</form>
+			<!-- <p class="other-btns">
+				<a href="/" class="btn btn-blue">Facebook me in</a>
+			</p> -->
+		</div>
+
+		<div class="welcome-overlay recoverpassword" style="display:none;">
+			<div class="message">Sign in</div>
+			<form action="/home/login" class="full" method="post">
+				<input name="email" type="email" placeholder="Email"><br/>
+				<input name="password" type="password" placeholder="Password"><br/>
+				<button type="submit" class="btn btn-green">Sign in</button><br/>
+				<p class="small grey">
+					<a href="/" class="grey">No account?</a> - 
+					<a href="/home/lostpassword" id="recoverpassword" class="grey">Lost password</a>
+				</p>
+			</form>
+			<!-- <p class="other-btns">
+				<a href="/" class="btn btn-blue">Facebook me in</a>
+			</p> -->
+		</div>
+		</div>
+	</div>
+</div>

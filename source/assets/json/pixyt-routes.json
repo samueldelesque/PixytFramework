@@ -1,0 +1,175 @@
+{
+	"index": {
+		"title":"Pixyt: The Portfolio Website Network",
+		"description":"Build a portfolio website and connect with other photographers.",
+		"template":"index"
+	},
+	
+	"login": {
+		"title":"Log in",
+		"description":"Sign in to Pixyt, the photography network",
+		"template":"home.login",
+		"https":true
+	},
+	
+	"about": {
+		"title":"Meet the Pixyt Team",
+		"description":"Meet the Pixyt team - revolutionizing the photography industry",
+		"template":"home.about"
+	},
+
+	"interview": {
+		"title": "Pixyt interviews",
+		"description": "Read photographer interviews on Pixyt.",
+		"template": "interviews.index",
+		"content": {
+			"jan-masny":{
+				"title": "Jan Masny | Pixyt interviews",
+				"description": "Jan masny produces beautiful fashion imagery from his studio in London.",
+				"template": "interviews.jan-masny"
+			},
+			"charles-caesar":{
+				"title": "Charles Caesar | Pixyt interviews",
+				"description": "Charles Caesar is a Brooklyn based photographer.",
+				"template": "interviews.charles-caesar"
+			},
+			"david-lykes-keenan":{
+				"title": "David Lykes Keenan | Pixyt interviews",
+				"description": "David Lykes Keenan is a Brooklyn based photographer.",
+				"template": "interviews.david-lykes-keenan"
+			}
+		}
+	},
+
+	"404": {
+		"title":"Page not found",
+		"description":"The page you are looking for does not exist!",
+		"template":"404"
+	},
+	
+	"feed": {
+		"title":"Pixyt: The Photo Network",
+		"description":"Build a portfolio website and connect with other photographers.",
+		"template":"home.feed",
+		"requireLogin":true
+	},
+	
+	"explore": {
+		"title":"Pixyt: The Photo Network",
+		"description":"Build a portfolio website and connect with other photographers.",
+		"template":"home.explore",
+		"requireLogin":true
+	},
+	
+	"logout": {
+		"title":"Sign out",
+		"description":"Log out of Pixyt",
+		"template":"home.logout",
+		"requireLogin":true
+	},
+
+	"recover": {
+		"title": "Lost password?",
+		"description": "Fill in your email and we will be in touch shortly",
+		"https":true
+	},
+
+	"settings": {
+		"title": "Account settings",
+		"description": "Edit your settings",
+		"template": "settings.index",
+		"requireLogin":true
+	},
+
+	"messages": {
+		"title": "Messages",
+		"description": "Read and send messages",
+		"view": "Messages",
+		"dynamic":true,
+		"requireLogin":true
+	},
+
+	"portfolio":{
+		"title":"Create a portfolio",
+		"description":"Create a simple stunning portfolio to showcase your work and attract clients.",
+		"template":"portfolio.index",
+
+		"content":{
+			"domain":{
+				"title":"Select a domain",
+				"description":"Pick a domain on which will be hosted your website"
+			},
+			"hosting":{
+				"title":"Select a hosting plan",
+				"description":"Pick a hosting plan that fits your needs"
+			}
+		}
+	},
+	
+	"checkout":{
+		"title":"Review your cart",
+		"description":"Check that your order is correct",
+		"view":"Checkout",
+		"https":true,
+
+		"content":{
+			"payment":{
+				"title":"Payment",
+				"description":"Fill in your card details or select other payment method"
+			},
+			"gateway":{
+				"title":"Processing payment",
+				"description":"Going to payment gateway"
+			},
+			"finalize":{
+				"title":"Finalize your order",
+				"description":"Finalize order and validate payment"
+			}
+		}
+	},
+
+	"organize":{
+		"title":"Organize",
+		"description":"Upload and organize your work",
+		"template":"organizer.layout",
+		"requireLogin":true,
+
+		"content":{
+			"serie":{
+				"title":"{{title}}",
+				"description":"{{description}}",
+				"template":"organizer.serie",
+				"dynamic":true,
+				"requireLogin":true
+			},
+			"photo":{
+				"title":"{{title}}",
+				"description":"{{description}}",
+				"template":"organizer.photo",
+				"dynamic":true,
+				"requireLogin":true
+			}
+		}
+	},
+
+	"stack": {
+		"title": "{{title}}",
+		"description":"{{description}}, by {{author}}.",
+		"view":"Stack",
+		"dynamic":true
+	},
+
+	"photo": {
+		"title": "{{title}}",
+		"description":"{{description}}, by {{author}}.",
+		"view":"Photo",
+		"dynamic":true
+	},
+
+	"user": {
+		"title": "{{firstname}} {{lastname}}",
+		"description":"{firstname}} {{lastname}} - {{profile.about}}",
+		"view":"User",
+		"dynamic":true
+	}
+}

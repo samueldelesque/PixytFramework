@@ -1,0 +1,32 @@
+#Options +FollowSymLinks
+#php_flag display_startup_errors on
+#php_flag display_errors on
+#php_flag html_errors on
+
+RewriteEngine on
+
+#AddDefaultCharset UTF-8
+#RewriteCond %{HTTP_HOST} ^sync.pixyt.com
+#RewriteCond %{REQUEST_FILENAME} !webdav\.php$
+#RewriteRule ^(.*)$ /webdav.php [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+
+#RewriteCond %{HTTP_HOST} ^cdn
+#RewriteCond %{REQUEST_URI} !^/cdn
+#RewriteRule ^(.*)$ cdn/$1 [L]
+
+#RewriteCond %{REQUEST_URI} ^/theme
+#RewriteRule ^theme/(*)$ themes/build/$1 [QSA,L]
+
+RewriteRule ^([^.]+).html$ /index.php?url=$1&format=html [QSA,L]
+RewriteRule ^([^.]+).json$ /index.php?url=$1&format=json [QSA,L]
+RewriteRule ^([^.]+).xml$ /index.php?url=$1&format=xml [QSA,L]
+RewriteRule ^([^.]+)$ /index.php?url=$1 [QSA,L]
+
+#ErrorDocument 400 /error/400
+#ErrorDocument 401 /error/401
+#ErrorDocument 403 /error/403
+#ErrorDocument 404 /error/404
+#ErrorDocument 500 /error/500

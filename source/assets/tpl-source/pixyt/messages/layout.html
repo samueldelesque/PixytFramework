@@ -1,0 +1,66 @@
+<div class="messages-panel">
+	<div class="contact-list">
+		<div class="messages-header">
+			<h1 id="messages-title">Messages</h1>
+			<a id="new-conversation-button" class="new-button" href="/account/messages">+</a>
+		</div>
+		<div id="conversations-list">
+
+		</div>
+		<!-- <ul id="conversations-list" class="conversations"> -->
+
+			<!-- <li class="active">
+				<div class="avatar"><img src="http://img.oguzdev.com/9AVe5RZdzu_avatar34781_1.gif.jpg" /></div>
+				<div class="meta">
+					<h3 class="contact-name">Oguz Bilgener</h3>
+					<p class="message-last">Hello, how are you...</p>
+				</div>
+			</li> -->
+
+		<!-- </ul> -->
+	</div>
+	<div class="messages-content">
+		<div class="conversation-meta">
+			<h2>{{contact_name}}</h2>
+			<div class="conversation-spinner"></div>
+		</div>
+
+		<div id="conversation" class="conversation">
+			<!-- <ul id="messages-list" class="messages-list"> -->
+				<!-- <li class="conversation-message message-left">
+					<p class="message-content">Hello Pixyt</p>
+					<div class="message-meta">2h</div>
+				</li> -->
+			<!-- </ul> -->
+		</div>
+
+		<div class="conversation-send">
+			<textarea id="conversation-reply-input" class="conversation-reply-input" placeholder="Write a reply..."></textarea>
+			<button id="conversation-submit" class="conversation-submit">Send</button>
+			<div id="conversation-reply-preferences" class="conversation-reply-preferences">
+				<input type="checkbox" id="conversation-reply-preference-enter" class="conversation-reply-preference-checkbox">
+				<label for="conversation-reply-preference-enter" class="conversation-reply-preference-label">Press <strong>Enter</strong> to send</label>
+			</div>
+		</div>
+		<div style="position: fixed; z-index: -1; background:rgba(255,255,255,0.6); width: 800px; height: 800px;"></div>
+	</div>
+
+	<div id="messages-content-new" class="messages-content-new">
+		<div id="messages-content-new-recipient-container" class="messages-content-new-recipient">
+			<div id="messages-content-remove-recipient" class="button-remove-recipient">x</div>
+			<input type="text" id="messages-content-new-recipient" class="messages-content-new-recipient-input" placeholder="Type a name..." autocomplete="off" />
+		</div>
+
+		<div id="messages-suggestions" class="messages-suggestions">
+			<!-- <ul id="contact-suggestion-list" class="contact-suggestion-list"> -->
+				<!-- <li id="contact-suggetsion-item" class="contact-suggestion-item cf">
+					<div class="avatar"><img src="http://img.oguzdev.com/9AVe5RZdzu_avatar34781_1.gif.jpg" alt="" /></div>
+					<div class="meta">
+						<p class="contact-name">Oguz Bilgener</p>
+					</div>
+				</li> -->
+			<!-- </ul> -->
+		</div>	
+
+	</div>
+</div>

@@ -1,0 +1,117 @@
+@-webkit-keyframes loader-rotation {
+	from {
+	-webkit-transform: rotate(0deg);
+	}
+	to {
+	-webkit-transform: rotate(359deg);
+	}
+}
+@-moz-keyframes loader-rotation {
+	from {
+	-moz-transform: rotate(0deg);
+	}
+	to {
+	-moz-transform: rotate(359deg);
+	}
+}
+@-o-keyframes loader-rotation {
+	from {
+	-o-transform: rotate(0deg);
+	}
+	to {
+	-o-transform: rotate(359deg);
+	}
+}
+@keyframes loader-rotation {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(359deg);
+	}
+}
+.spin(@speed: .5s){
+	-webkit-animation: loader-rotation @speed infinite linear;
+	-moz-animation: loader-rotation @speed infinite linear;
+	-o-animation: loader-rotation @speed infinite linear;
+	animation: loader-rotation @speed infinite linear;
+}
+.flip-horizontal {
+    -moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    transform: scaleX(-1);
+    -ms-filter: fliph; /*IE*/
+    filter: fliph; /*IE*/
+}
+.flip-vertical {
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    transform: scaleY(-1);
+    -ms-filter: flipv; /*IE*/
+    filter: flipv; /*IE*/
+}
+@-webkit-keyframes back-and-forth {
+	0% {
+	margin-left: 0;
+	}
+	20%{
+		margin-left:50px;
+	}
+	24%{
+		margin-left: 0;
+	}
+	100% {
+	margin-left: 0;
+	}
+}
+@-moz-keyframes back-and-forth {
+	0% {
+	margin-left: 0;
+	}
+	20%{
+		margin-left:50px;
+	}
+	24%{
+		margin-left: 0;
+	}
+	100% {
+	margin-left: 0;
+	}
+}
+@-o-keyframes back-and-forth {
+	0% {
+	margin-left: 0;
+	}
+	20%{
+		margin-left:50px;
+	}
+	24%{
+		margin-left: 0;
+	}
+	100% {
+	margin-left: 0;
+	}
+}
+@keyframes back-and-forth {
+	0% {
+	margin-left: 0;
+	}
+	20%{
+		margin-left:50px;
+	}
+	24%{
+		margin-left: 0;
+	}
+	100% {
+	margin-left: 0;
+	}
+}
+
+.backAndForth(@speed: 30s){
+	-webkit-animation: back-and-forth @speed infinite linear;
+	-moz-animation: back-and-forth @speed infinite linear;
+	-o-animation: back-and-forth @speed infinite linear;
+	animation: back-and-forth @speed infinite linear;
+}

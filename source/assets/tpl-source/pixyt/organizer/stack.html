@@ -1,0 +1,25 @@
+<form action="/stack/{{stack.id}}" class="stack" method="PUT">
+	<h1 id="Stack_{{stack.id}}_title" title="Title"><input name="title" placeholder="Title" value="{{stack.title}}"/></h1>
+	<p>
+		<textarea name="description" placeholder="Description">{{stack.description}}</textarea><br/>
+		<input name="genre" placeholder="Genre" value="{{stack.genre}}"/>
+	</p>
+</form>
+<div class="dropzone">
+<form method="POST" action="/upload">
+	<input type="hidden" name="kid" value="{{stack.id}}"/>
+	<input type="file" class="files" name="files[]" data-url="/upload/" multiple/>
+	<div class="progress">
+		<div class="bar" style="width:0;display:none;"></div>
+	</div>
+{{#each photos}}
+<div class="file">
+	<img src="/cdn/{{uid}}/small/{{id}}.jpg" alt="{{title}}" title="{{title}}"/>
+</div>
+{{else}}
+<div class="empty">
+	<p>You don't have any photos in this collection yet. Drop some photos here! <div class="btn btn-green">Add photos</div></p>
+</div>
+{{/each}}
+</form>
+</div>

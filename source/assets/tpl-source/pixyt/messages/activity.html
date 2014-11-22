@@ -1,0 +1,21 @@
+<div class="notifications d3x2 col">
+	{{#each notifications}}
+		<div class="notification">
+			<p><b>{{who}}</b> {{did}} {{what}}</p>
+		</div>
+	{{/each}}
+</div>
+<div class="sidebar">
+<div class="conversations d3 col navigation">
+	<div class="tab people">
+	<div class="denomination">Conversations</div>
+	{{#each people}}
+		<div class="el">
+			<h4>{{name}}</h4>
+			<p>{{preview}}</p>
+		</div>
+	{{/each}}
+	</div>
+	<a href="/account/messages">messages</a>
+</div>
+</div>

@@ -1,0 +1,47 @@
+.navigation{
+	background:rgba(30,32,35,0.1);
+	color:#4b4b4b;
+	box-shadow:0 0 20px rgba(30,30,30,0.1);
+	height:100%;
+	.toolbox{
+		background:rgba(0,0,0,0.2);
+	}
+	a{
+		margin:5px;
+		img{
+			width:100%;
+		}
+		&:hover{
+			opacity:1;
+		}
+	}
+	.tab{
+		.denomination{
+			font-weight:bold;
+			font-size:13px;
+			padding:4px;
+			height:13px;
+			text-transform:uppercase;
+			background:url("/img/navigation-arrow.png") no-repeat bottom right;
+			line-height:14px;
+			&.closed{
+				background:url("/img/navigation-arrow.png") no-repeat top right;
+			}
+		}
+		.section{
+			border-left:3px solid #09F;
+			margin-bottom:3px;
+		}
+		.el{
+			background:rgba(20,22,25,0.1);
+			padding:8px;
+			box-shadow:0 0 20px rgba(40,44,50,0.1);
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+			transition-duration:.4s;
+			cursor:pointer;
+			display:block;
+		}
+	}
+}

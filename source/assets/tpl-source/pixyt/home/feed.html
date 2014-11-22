@@ -1,0 +1,14 @@
+<div class="test">
+	<span id="testicon"></span>
+</div>
+
+<div class="feed d1000 center" class="js-masonry">
+	{{#each items}}
+	<div class="item {{size}}">
+	<a href="/photo/{{id}}/view" class="lightbox">
+		<img src="/cdn/{{user.id}}/full/{{id}}.jpg" alt="{{title}}" title="{{title}}"/>
+	</a>
+		<h3>Posted by <a href="/user/{{user.id}}"><b>{{user.firstname}} {{user.lastname}}</b></a>.</h3>
+	</div>
+	{{/each}}
+</div>
