@@ -25,3 +25,12 @@ The structure of this PHP app is as follow:
 						$myPhotos->where('uid',$_SESSION['uid']);
 						$photos = $myPhotos->data();
 						//$photos now contains an array of all the user's photos.
+
+
+
+
+
+
+### Credits
+
+This project was brought to you by [Samuel Delesque](http://samueldelesque.me).
